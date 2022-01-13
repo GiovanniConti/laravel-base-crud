@@ -7,6 +7,12 @@
 @section('main_content')
 
   <div class="container">
+    <form action="" method="post" class="form-delete">
+      @csrf
+      @method('delete')
+      <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+
     <section class="hero py3">
       <div class="hero-container container text-center">
         <img class="" src="{{ $comic->thumb }}" alt="">
