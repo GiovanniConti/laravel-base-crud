@@ -1,16 +1,17 @@
 @extends('layouts.default')
 
 {{-- Page Title --}}
-@section('page_title', 'Add Comic')
+@section('page_title', 'Edit Comic')
 
 {{-- Main Content --}}
 @section('main_content')
 
   <div class="container">
-    <h1 class="text-danger">Add New Comic</h1>
+    <h1 class="text-danger">Edit Comic</h1>
 
-    <form action="{{ route("comics.store") }}" method="post">
+    <form action="{{ route("comics.update", $comic->id) }}" method="post">
       @csrf
+      @method('PUT')
 
       <div class="mb-3">
         <label for="field_thumb" class="form-label">Image</label>
@@ -53,7 +54,7 @@
       </div>
 
       <div class="text-center">
-        <button class="btn btn-success" type="submit">Create</button>
+        <button class="btn btn-success" type="submit">Save</button>
       </div>
 
     </form>

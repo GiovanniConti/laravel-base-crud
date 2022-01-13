@@ -21,7 +21,7 @@
               <h5 class="card-title">{{ $comic['title']}}</h5>
               <div class="container-card-links d-flex justify-content-evenly">
                 <a class="card-link" href="{{route('comics.show', $comic['id'])}}">Details</a>
-                <a class="card-link" href="">Edit</a>
+                <a class="card-link" href="{{route('comics.edit', $comic['id'])}}">Edit</a>
               </div>
             </div>
           </div>
