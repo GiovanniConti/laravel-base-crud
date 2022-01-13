@@ -16,8 +16,8 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ $comic['title']}}</h5>
-              <a href="">Dettagli</a>
-              <a href="">Modifica</a>
+              <a class="card-link" href="{{route('comics.show', $comic['id'])}}">Details</a>
+              <a class="card-link" href="">Edit</a>
             </div>
           </div>
         </div>
